@@ -18,4 +18,11 @@ class CreateAccountSpec extends Specification {
       accountID << [1, 2, 3]
   }
 
+  def "a created account should have an empty balance" () {
+    when: "creates an account"
+      int accountId = bank.createAccount()
+    then: "this account has an empty balance"
+      bank.getAccount(accountId).balance == 0
+  }
+
 }

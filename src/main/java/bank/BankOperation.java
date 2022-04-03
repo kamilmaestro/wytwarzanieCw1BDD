@@ -9,6 +9,8 @@ public interface BankOperation {
   /** Zaklada konto i zwraca jego numer. Poczatkowy stan konta to 0 (numer konta powinien być inkrementowany) */
   int createAccount();
 
+  Account getAccount(int id);
+
   /** Likwiduje konto o podanym numerze. Zwraca stan konta w momencie zamkniecia lub
    rzuca wyjątek gdy konta nie ma */
   int deleteAccount(int accountNumber);

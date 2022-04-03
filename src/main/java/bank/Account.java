@@ -1,15 +1,20 @@
 package bank;
 
-final class Account {
+public final class Account {
 
   private final int accountId;
+  private double balance;
 
-  Account(int accountId) {
+  public Account(int accountId) {
     this.accountId = accountId;
   }
 
-  int getAccountId() {
+  public int getAccountId() {
     return accountId;
+  }
+
+  public double getBalance() {
+    return balance;
   }
 
 }

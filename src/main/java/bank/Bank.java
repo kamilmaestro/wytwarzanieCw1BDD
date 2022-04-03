@@ -17,6 +17,11 @@ public final class Bank implements BankOperation {
   }
 
   @Override
+  public Account getAccount(int id) {
+    return accountRepository.getById(id);
+  }
+
+  @Override
   public int deleteAccount(int accountNumber) {
     return 0;
   }

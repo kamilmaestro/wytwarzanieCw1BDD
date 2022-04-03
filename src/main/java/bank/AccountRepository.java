@@ -6,6 +6,7 @@ import java.util.Map;
 interface AccountRepository {
 
   Account save(Account account);
+  Account getById(int id);
 
   class InMemoryAccountRepository implements AccountRepository {
 
@@ -15,6 +16,11 @@ interface AccountRepository {
     public Account save(Account account) {
       values.put(account.getAccountId(), account);
       return account;
+    }
+
+    @Override
+    public Account getById(int id) {
+      return values.get(id);
     }
 
   }
